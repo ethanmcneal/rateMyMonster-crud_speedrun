@@ -13,9 +13,9 @@ const Home = () =>{
     },[])
     const getTest = async() => {
         try { 
-        let res = await axios.get('/api/api_test')
-        setTest(res.data.hello)
-        console.log(res.data.hello)
+        let res = await axios.get('/monsters')
+        setTest(res.data)
+        console.log(res)
             
         } catch (error) {
             alert(error)
@@ -29,22 +29,9 @@ const Home = () =>{
             <h1>Welcome back!</h1>
             <h3>How are you today {user.nickname}?</h3>
         </CardContainer> }
+        {JSON.stringify(test)}
         
         </div>
     )
 }
-
-// class component
-
-// class Home extends React.Component {
-
-
-//     render(){
-//         return (
-//             <div>
-//                 <h1>Home Page here</h1>
-//             </div>
-//         )
-//     }
-// }
 export default Home
