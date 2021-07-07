@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import ProtectedRoute from './components/ProtectedRoute';
 import FetchUser from './components/FetchUser';
 import Home from './pages/Home';
+import MonstersPage from './pages/MonstersPage';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
      <Route exact path='/styled' component={StyledComponents} />
      <Route exact path='/register' component={Register} />
      <Route exact path='/login' component={Login} />
+     <Route exact path='/monsters' component={MonstersPage} />
+
    </Switch>
    </FetchUser>
    </div>
